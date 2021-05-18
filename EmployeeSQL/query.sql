@@ -8,13 +8,14 @@ from employees, salaries
 where employees.emp_no = salaries.emp_no;
 
 -- List first name, last name, and hire date for employees who were hired in 1986.
--- select employees.last_name,
--- employees.first_name,
--- employees.hire_date,
--- date_part(‘year’,TIMESTAMP ‘2017-01-01’)
--- from employees;
-SELECT *
-from employees;
+select employees.last_name,
+employees.first_name,
+employees.hire_date
+from employees
+where employees.hire_date >= '1/1/1986' and employees.hire_date < '1/1/1987'
+order by employees.hire_date;
+
+
 
 
 

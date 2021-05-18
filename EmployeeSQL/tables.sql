@@ -10,11 +10,11 @@ create table titles (
 create table employees (
 	emp_no INT NOT NULL,
 	emp_title_id VARCHAR,
-	birth_date VARCHAR NOT NULL,
+	birth_date DATE NOT NULL,
 	first_name VARCHAR NOT NULL,
 	last_name VARCHAR NOT NULL,
 	sex VARCHAR,
-	hire_date VARCHAR NOT NULL,
+	hire_date DATE NOT NULL,
 	primary key (emp_no),
 	foreign key (emp_title_id) references titles (title_id)
 );
